@@ -91,3 +91,26 @@ class Client():
 		except Exception as e:
 			print(f"[ERROR] Donwload failed")
 			print(e)
+	
+	def list_dir(self, src: str):
+		try:
+			result = []
+
+			folder = self.ctx.web.get_folder_by_server_relative_url(src)
+			files = folder.files
+			folders = folder.folders
+
+			self.ctx.load(files)
+			self.ctx.load(folders)
+			self.ctx.execute_query()
+
+			for item in folders:
+				result.append((item.properties["Name"], True))
+			
+			for item in files:
+				result.append((item.properties["Name"], False))
+
+		except Exception as e:
+			print(e)
+		
+		return result
