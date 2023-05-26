@@ -109,6 +109,20 @@ download_dir(src, dst)
 - <b><i>SHAREPOINT_BASE_PATH</i></b>, <b><i>SHAREPIONT_TARGET_PATH</i></b>, <b><i>LOCAL_DIR_PATH</i></b> See item upload_dir
 
 
+### list_dir
+
+A function that listing a particular directory in the sharepoint and all the contents under it.
+
+```python
+default_path = < SHAREPOINT_BASE_PATH >
+src = default_path + < SHAREPOINT_TARGET_PATH >
+
+list_dir(src)
+```
+
+- <b><i>SHAREPOINT_BASE_PATH</i></b>, <b><i>SHAREPIONT_TARGET_PATH</i></b> See item upload_dir
+
+
 ## Third Party Libraries and Dependencies
 
 - [Office365-REST-Python-Client](https://pypi.org/project/Office365-REST-Python-Client/)
