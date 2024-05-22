@@ -14,6 +14,11 @@ setup(
     long_description_content_type="text/markdown",
     description="Simple way to handle sharepoint with python",
     packages=find_packages(),
+    entry_points={
+        'console_scripts': [
+            'simple-sharepoint-cli=simple_sharepoint.__main__:main',
+        ],
+    },    
     install_requires=['Office365-REST-Python-Client'],
     classifiers=[
         'License :: OSI Approved :: MIT License',
