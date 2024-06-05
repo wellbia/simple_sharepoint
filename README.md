@@ -123,6 +123,16 @@ list_dir(src)
 - <b><i>SHAREPOINT_BASE_PATH</i></b>, <b><i>SHAREPIONT_TARGET_PATH</i></b> See item upload_dir
 
 
+## Use console scripts
+
+```shell
+simple-sharepoint-cli < FILE_PATH > --client_id < CLIENT_ID > --client-secret < CLIENT_SECRET > --base-url < BASE_URL > --default_path < DEFAULT_PATH > --remote-dir < REMOTE_DIR >
+```
+
+- <b><i>CLIENT_ID</i></b>, <b><i>CLIENT_SECRET</i></b>, <b><i>BASE_URL</i></b> See item Usage.
+- <b><i>DEFAULT_PATH</i></b> See upload_dir. same SHAREPOINT_BASE_PATH
+- <b><i>REMOTE_DIR</i></b> See upload_dir. same SHAREPOINT_TARGET_PATH
+
 ## Third Party Libraries and Dependencies
 
 - [Office365-REST-Python-Client](https://pypi.org/project/Office365-REST-Python-Client/)

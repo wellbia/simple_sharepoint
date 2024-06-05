@@ -28,7 +28,7 @@ def main():
         sys.exit(2)
 
     c = client.Client(args.client_id, args.client_secret, args.base_url)
-    upload_data(c, args.default_path, args.filename, args.dest)
+    upload_data(c, args.default_path, args.filename, args.remote_dir)
 
 
 if __name__ == "__main__":
