@@ -1,0 +1,17 @@
+name: android
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: [self-hosted, winbuild]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run build script
+      run: ./deploy.ps1 -RepoUrl ${{ secrets.REPO_URL }} -User ${{ secrets.USER }} -Pwd ${{ secrets.PWD }}
+  
