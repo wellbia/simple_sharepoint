@@ -15,4 +15,4 @@ if (Test-Path -Path "dist") {
 }
 
 & python setup.py bdist_wheel
-& twine upload --repository-url $RepoUrl -u $User -p $Pwd dist/*
+& twine upload --repository-url "$RepoUrl" -u "$User" -p "$Pwd" dist/*
